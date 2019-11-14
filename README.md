@@ -10,7 +10,7 @@ bioRxiv, 772954; doi: https://doi.org/10.1101/772954
 
 *1. Permutation test*
 
-A permutation test was used to identify TE families enriched for DNAse hypersensitive sites (DHS). The main script is permutation_test.sh, which is a HPC cluster array job script that runs the permutation_pipeline.R script for all of the peak files listed in dhs_list.txt. Requires bedtools. See permutation_pipeline.R for more details about other files.
+A permutation test was used to identify TE families enriched for DNAse hypersensitive sites (DHS). The main script is permutation_test.sh, which is a HPC cluster array job script that runs the permutation_pipeline.R script for all of the peak files listed in dhs_list.txt (peak files not included in the repository due to space restrictions). Requires bedtools. See permutation_pipeline.R for more details about other files used.
 
 
 *2. TE family level analysis*
