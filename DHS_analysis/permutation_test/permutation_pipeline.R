@@ -7,7 +7,7 @@
 ##required files
 
 source('rmsk_intersect_functions.R')  ##make.random, intersectBED and test.overlap functions
-rmasker = 'Repeatmasker_hg38.txt' ##Repeatmasker annotation file in bed format, uncompressed
+rmasker = 'Repeatmasker_hg38.txt' ##Repeatmasker annotation file in bed format, uncompressed (not in this repository)
 rmasker.counts = 'hg38_rm_counts.txt' ##Total counts of each repeatmasker family (repName)
 unmappable = 'unmappable_hg38_MB.bed'  ##Unmappable regions of the genome in bed format, uncompressed
 
