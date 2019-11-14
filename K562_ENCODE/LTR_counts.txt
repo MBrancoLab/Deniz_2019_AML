@@ -1,0 +1,6 @@
+    2740 LTR12C_hg19.bed
+     188 LTR13A_hg19.bed
+     326 LTR2B_hg19.bed
+     295 LTR2C_hg19.bed
+     431 LTR5B_hg19.bed
+     645 LTR5_Hs_hg19.bed

@@ -1,0 +1,14 @@
+setwd('~/Desktop/chimeric')
+
+gtf.files = list.files(pattern='gtf')
+
+for (i in 1:length(gtf.files)) {
+	gtf = read.delim(gtf.files[i],header=F,as.is=T,skip=2,quote="")
+	exons = gtf[gtf$V3=='exon',]
+	transcript_id = unlist(lapply(strsplit(exons$V9,';'),function(x) x[2]))
+	n.exons = tapply(transcript_id,factor(transcript_id),length)
+	multi.exon.id = names(n.exons)[n.exons>1]
+	multi.exon = exons[transcript_id %in% multi.exon.id,]
+	
+	write.table(multi.exon,gsub('\\.gtf','_multi.gtf',gtf.files[i]),sep='\t',quote=F,row.names=F,col.names=F)
+}
