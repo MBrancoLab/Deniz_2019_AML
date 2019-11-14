@@ -1,0 +1,52 @@
+AME (Analysis of Motif Enrichment): Compiled on Jul 25 2017 at 13:31:54
+------------------------------
+Copyright (c) Robert McLeay <r.mcleay@imb.uq.edu.au> & Timothy Bailey <t.bailey@imb.uq.edu.au>, 2009.
+
+Command line
+ame --control LTR5_Hs_nodhs.fa --o LTR5_Hs_hocomoco LTR5_Hs_dhs.fa /Users/miguelbranco/Documents/motif_databases/HUMAN/HOCOMOCOv11_core_HUMAN_mono_meme_format.meme
+
+Not in partition maximization mode. Fixing partition at the number of primary sequences (137).
+
+Threshold p-value for reporting results: 0.05
+Motif p-values are corrected by #Motifs * #ThresholdsTested - (401 * 1 = 401)
+
+1. Fisher's exact test p-value of motif ETV2_HUMAN.H11MO.0.B  top 137 seqs: 3.966e-13 (Corrected p-value: 1.59e-10)
+2. Fisher's exact test p-value of motif FOXO4_HUMAN.H11MO.0.C  top 137 seqs: 7.794e-11 (Corrected p-value: 3.125e-08)
+3. Fisher's exact test p-value of motif BATF_HUMAN.H11MO.0.A  top 137 seqs: 1.546e-10 (Corrected p-value: 6.199e-08)
+4. Fisher's exact test p-value of motif FOXO1_HUMAN.H11MO.0.A  top 137 seqs: 5.525e-10 (Corrected p-value: 2.216e-07)
+5. Fisher's exact test p-value of motif HXA10_HUMAN.H11MO.0.C  top 137 seqs: 1.653e-09 (Corrected p-value: 6.63e-07)
+6. Fisher's exact test p-value of motif FOXP2_HUMAN.H11MO.0.C  top 137 seqs: 6.996e-09 (Corrected p-value: 2.805e-06)
+7. Fisher's exact test p-value of motif ELF3_HUMAN.H11MO.0.A  top 137 seqs: 1.51e-08 (Corrected p-value: 6.055e-06)
+8. Fisher's exact test p-value of motif THAP1_HUMAN.H11MO.0.C  top 137 seqs: 7.698e-08 (Corrected p-value: 3.087e-05)
+9. Fisher's exact test p-value of motif NR1I3_HUMAN.H11MO.0.C  top 137 seqs: 1.119e-07 (Corrected p-value: 4.488e-05)
+10. Fisher's exact test p-value of motif TF7L2_HUMAN.H11MO.0.A  top 137 seqs: 2.091e-07 (Corrected p-value: 8.384e-05)
+11. Fisher's exact test p-value of motif VEZF1_HUMAN.H11MO.0.C  top 137 seqs: 2.521e-07 (Corrected p-value: 0.0001011)
+12. Fisher's exact test p-value of motif NR1I2_HUMAN.H11MO.0.C  top 137 seqs: 2.621e-07 (Corrected p-value: 0.0001051)
+13. Fisher's exact test p-value of motif FOXK1_HUMAN.H11MO.0.A  top 137 seqs: 4.573e-07 (Corrected p-value: 0.0001834)
+14. Fisher's exact test p-value of motif NR4A1_HUMAN.H11MO.0.A  top 137 seqs: 6.243e-07 (Corrected p-value: 0.0002503)
+15. Fisher's exact test p-value of motif NR2C1_HUMAN.H11MO.0.C  top 137 seqs: 9.068e-07 (Corrected p-value: 0.0003635)
+16. Fisher's exact test p-value of motif TF7L1_HUMAN.H11MO.0.B  top 137 seqs: 2.37e-06 (Corrected p-value: 0.0009498)
+17. Fisher's exact test p-value of motif ZN140_HUMAN.H11MO.0.C  top 137 seqs: 3.436e-06 (Corrected p-value: 0.001377)
+18. Fisher's exact test p-value of motif SIX1_HUMAN.H11MO.0.A  top 137 seqs: 4.015e-06 (Corrected p-value: 0.001609)
+19. Fisher's exact test p-value of motif ZN770_HUMAN.H11MO.0.C  top 137 seqs: 4.275e-06 (Corrected p-value: 0.001713)
+20. Fisher's exact test p-value of motif FOXC1_HUMAN.H11MO.0.C  top 137 seqs: 5.979e-06 (Corrected p-value: 0.002395)
+21. Fisher's exact test p-value of motif ZN260_HUMAN.H11MO.0.C  top 137 seqs: 6.68e-06 (Corrected p-value: 0.002675)
+22. Fisher's exact test p-value of motif FOXO3_HUMAN.H11MO.0.B  top 137 seqs: 6.78e-06 (Corrected p-value: 0.002715)
+23. Fisher's exact test p-value of motif ELF2_HUMAN.H11MO.0.C  top 137 seqs: 6.972e-06 (Corrected p-value: 0.002792)
+24. Fisher's exact test p-value of motif ZBT7A_HUMAN.H11MO.0.A  top 137 seqs: 7.018e-06 (Corrected p-value: 0.00281)
+25. Fisher's exact test p-value of motif ZN563_HUMAN.H11MO.0.C  top 137 seqs: 8.04e-06 (Corrected p-value: 0.003219)
+26. Fisher's exact test p-value of motif SRF_HUMAN.H11MO.0.A  top 137 seqs: 1.158e-05 (Corrected p-value: 0.004632)
+27. Fisher's exact test p-value of motif TCF7_HUMAN.H11MO.0.A  top 137 seqs: 2.013e-05 (Corrected p-value: 0.00804)
+28. Fisher's exact test p-value of motif RORG_HUMAN.H11MO.0.C  top 137 seqs: 2.928e-05 (Corrected p-value: 0.01167)
+29. Fisher's exact test p-value of motif SMCA1_HUMAN.H11MO.0.C  top 137 seqs: 3.647e-05 (Corrected p-value: 0.01452)
+30. Fisher's exact test p-value of motif EHF_HUMAN.H11MO.0.B  top 137 seqs: 3.96e-05 (Corrected p-value: 0.01576)
+31. Fisher's exact test p-value of motif EGR1_HUMAN.H11MO.0.A  top 137 seqs: 5.326e-05 (Corrected p-value: 0.02113)
+32. Fisher's exact test p-value of motif ZIC3_HUMAN.H11MO.0.B  top 137 seqs: 6.211e-05 (Corrected p-value: 0.0246)
+33. Fisher's exact test p-value of motif CDX1_HUMAN.H11MO.0.C  top 137 seqs: 7.152e-05 (Corrected p-value: 0.02827)
+34. Fisher's exact test p-value of motif E2F7_HUMAN.H11MO.0.B  top 137 seqs: 7.409e-05 (Corrected p-value: 0.02927)
+35. Fisher's exact test p-value of motif NR4A2_HUMAN.H11MO.0.C  top 137 seqs: 9.289e-05 (Corrected p-value: 0.03657)
+36. Fisher's exact test p-value of motif ZN418_HUMAN.H11MO.0.C  top 137 seqs: 0.0001016 (Corrected p-value: 0.03992)
+37. Fisher's exact test p-value of motif THA_HUMAN.H11MO.0.C  top 137 seqs: 0.0001077 (Corrected p-value: 0.04225)
+38. Fisher's exact test p-value of motif PO2F1_HUMAN.H11MO.0.C  top 137 seqs: 0.0001087 (Corrected p-value: 0.04264)
+39. Fisher's exact test p-value of motif IRF2_HUMAN.H11MO.0.A  top 137 seqs: 0.0001197 (Corrected p-value: 0.04686)
+40. Fisher's exact test p-value of motif ZN121_HUMAN.H11MO.0.C  top 137 seqs: 0.0001266 (Corrected p-value: 0.04951)

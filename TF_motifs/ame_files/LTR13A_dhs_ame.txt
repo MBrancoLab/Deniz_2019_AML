@@ -1,0 +1,12 @@
+AME (Analysis of Motif Enrichment): Compiled on Jul 25 2017 at 13:31:54
+------------------------------
+Copyright (c) Robert McLeay <r.mcleay@imb.uq.edu.au> & Timothy Bailey <t.bailey@imb.uq.edu.au>, 2009.
+
+Command line
+ame --control LTR13A_nodhs.fa --o LTR13A_hocomoco LTR13A_dhs.fa /Users/miguelbranco/Documents/motif_databases/HUMAN/HOCOMOCOv11_core_HUMAN_mono_meme_format.meme
+
+Not in partition maximization mode. Fixing partition at the number of primary sequences (66).
+
+Threshold p-value for reporting results: 0.05
+Motif p-values are corrected by #Motifs * #ThresholdsTested - (401 * 1 = 401)
+

@@ -1,0 +1,21 @@
+AME (Analysis of Motif Enrichment): Compiled on Jul 25 2017 at 13:31:54
+------------------------------
+Copyright (c) Robert McLeay <r.mcleay@imb.uq.edu.au> & Timothy Bailey <t.bailey@imb.uq.edu.au>, 2009.
+
+Command line
+ame --control LTR2B_nodhs.fa --o LTR2B_hocomoco LTR2B_dhs.fa /Users/miguelbranco/Documents/motif_databases/HUMAN/HOCOMOCOv11_core_HUMAN_mono_meme_format.meme
+
+Not in partition maximization mode. Fixing partition at the number of primary sequences (72).
+
+Threshold p-value for reporting results: 0.05
+Motif p-values are corrected by #Motifs * #ThresholdsTested - (401 * 1 = 401)
+
+1. Fisher's exact test p-value of motif IRF7_HUMAN.H11MO.0.C  top 72 seqs: 3.898e-07 (Corrected p-value: 0.0001563)
+2. Fisher's exact test p-value of motif ETV2_HUMAN.H11MO.0.B  top 72 seqs: 5.204e-07 (Corrected p-value: 0.0002086)
+3. Fisher's exact test p-value of motif GABPA_HUMAN.H11MO.0.A  top 72 seqs: 6.942e-06 (Corrected p-value: 0.00278)
+4. Fisher's exact test p-value of motif BACH2_HUMAN.H11MO.0.A  top 72 seqs: 1.451e-05 (Corrected p-value: 0.0058)
+5. Fisher's exact test p-value of motif TAL1_HUMAN.H11MO.0.A  top 72 seqs: 1.742e-05 (Corrected p-value: 0.006961)
+6. Fisher's exact test p-value of motif ETS1_HUMAN.H11MO.0.A  top 72 seqs: 3.73e-05 (Corrected p-value: 0.01485)
+7. Fisher's exact test p-value of motif NR1I3_HUMAN.H11MO.0.C  top 72 seqs: 6.247e-05 (Corrected p-value: 0.02474)
+8. Fisher's exact test p-value of motif ZN418_HUMAN.H11MO.0.C  top 72 seqs: 8.966e-05 (Corrected p-value: 0.03531)
+9. Fisher's exact test p-value of motif CEBPB_HUMAN.H11MO.0.A  top 72 seqs: 0.0001272 (Corrected p-value: 0.04971)

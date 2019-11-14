@@ -1,0 +1,59 @@
+AME (Analysis of Motif Enrichment): Compiled on Jul 25 2017 at 13:31:54
+------------------------------
+Copyright (c) Robert McLeay <r.mcleay@imb.uq.edu.au> & Timothy Bailey <t.bailey@imb.uq.edu.au>, 2009.
+
+Command line
+ame --control LTR5B_nodhs.fa --o LTR5B_hocomoco LTR5B_dhs.fa /Users/miguelbranco/Documents/motif_databases/HUMAN/HOCOMOCOv11_core_HUMAN_mono_meme_format.meme
+
+Not in partition maximization mode. Fixing partition at the number of primary sequences (111).
+
+Threshold p-value for reporting results: 0.05
+Motif p-values are corrected by #Motifs * #ThresholdsTested - (401 * 1 = 401)
+
+1. Fisher's exact test p-value of motif ETV2_HUMAN.H11MO.0.B  top 111 seqs: 3.326e-10 (Corrected p-value: 1.334e-07)
+2. Fisher's exact test p-value of motif GATA2_HUMAN.H11MO.0.A  top 111 seqs: 6.206e-09 (Corrected p-value: 2.489e-06)
+3. Fisher's exact test p-value of motif TAL1_HUMAN.H11MO.0.A  top 111 seqs: 2.907e-08 (Corrected p-value: 1.166e-05)
+4. Fisher's exact test p-value of motif ETV4_HUMAN.H11MO.0.B  top 111 seqs: 2.994e-08 (Corrected p-value: 1.2e-05)
+5. Fisher's exact test p-value of motif AP2B_HUMAN.H11MO.0.B  top 111 seqs: 3.191e-08 (Corrected p-value: 1.28e-05)
+6. Fisher's exact test p-value of motif GATA6_HUMAN.H11MO.0.A  top 111 seqs: 7.309e-08 (Corrected p-value: 2.931e-05)
+7. Fisher's exact test p-value of motif RARA_HUMAN.H11MO.0.A  top 111 seqs: 9.501e-08 (Corrected p-value: 3.81e-05)
+8. Fisher's exact test p-value of motif GATA4_HUMAN.H11MO.0.A  top 111 seqs: 9.599e-08 (Corrected p-value: 3.849e-05)
+9. Fisher's exact test p-value of motif ZBT17_HUMAN.H11MO.0.A  top 111 seqs: 1.036e-07 (Corrected p-value: 4.153e-05)
+10. Fisher's exact test p-value of motif HXB7_HUMAN.H11MO.0.C  top 111 seqs: 1.47e-07 (Corrected p-value: 5.894e-05)
+11. Fisher's exact test p-value of motif ZN341_HUMAN.H11MO.0.C  top 111 seqs: 7.672e-07 (Corrected p-value: 0.0003076)
+12. Fisher's exact test p-value of motif ELF3_HUMAN.H11MO.0.A  top 111 seqs: 9.174e-07 (Corrected p-value: 0.0003678)
+13. Fisher's exact test p-value of motif ERG_HUMAN.H11MO.0.A  top 111 seqs: 1.149e-06 (Corrected p-value: 0.0004608)
+14. Fisher's exact test p-value of motif MAZ_HUMAN.H11MO.0.A  top 111 seqs: 1.195e-06 (Corrected p-value: 0.0004789)
+15. Fisher's exact test p-value of motif PPARA_HUMAN.H11MO.0.B  top 111 seqs: 1.499e-06 (Corrected p-value: 0.0006008)
+16. Fisher's exact test p-value of motif ZNF76_HUMAN.H11MO.0.C  top 111 seqs: 1.792e-06 (Corrected p-value: 0.0007184)
+17. Fisher's exact test p-value of motif ELF5_HUMAN.H11MO.0.A  top 111 seqs: 2.446e-06 (Corrected p-value: 0.0009805)
+18. Fisher's exact test p-value of motif PPARG_HUMAN.H11MO.0.A  top 111 seqs: 2.924e-06 (Corrected p-value: 0.001172)
+19. Fisher's exact test p-value of motif NR6A1_HUMAN.H11MO.0.B  top 111 seqs: 8.83e-06 (Corrected p-value: 0.003535)
+20. Fisher's exact test p-value of motif NR2C1_HUMAN.H11MO.0.C  top 111 seqs: 9.947e-06 (Corrected p-value: 0.003981)
+21. Fisher's exact test p-value of motif ZN263_HUMAN.H11MO.0.A  top 111 seqs: 1.019e-05 (Corrected p-value: 0.004077)
+22. Fisher's exact test p-value of motif PRDM1_HUMAN.H11MO.0.A  top 111 seqs: 1.216e-05 (Corrected p-value: 0.004865)
+23. Fisher's exact test p-value of motif MEF2B_HUMAN.H11MO.0.A  top 111 seqs: 1.277e-05 (Corrected p-value: 0.005107)
+24. Fisher's exact test p-value of motif STAT4_HUMAN.H11MO.0.A  top 111 seqs: 1.776e-05 (Corrected p-value: 0.007097)
+25. Fisher's exact test p-value of motif BATF_HUMAN.H11MO.0.A  top 111 seqs: 2.103e-05 (Corrected p-value: 0.008398)
+26. Fisher's exact test p-value of motif RFX2_HUMAN.H11MO.0.A  top 111 seqs: 2.246e-05 (Corrected p-value: 0.008965)
+27. Fisher's exact test p-value of motif NFKB1_HUMAN.H11MO.1.B  top 111 seqs: 2.917e-05 (Corrected p-value: 0.01163)
+28. Fisher's exact test p-value of motif SMCA1_HUMAN.H11MO.0.C  top 111 seqs: 3.001e-05 (Corrected p-value: 0.01196)
+29. Fisher's exact test p-value of motif FEZF1_HUMAN.H11MO.0.C  top 111 seqs: 3.403e-05 (Corrected p-value: 0.01355)
+30. Fisher's exact test p-value of motif FOXP2_HUMAN.H11MO.0.C  top 111 seqs: 3.443e-05 (Corrected p-value: 0.01371)
+31. Fisher's exact test p-value of motif RXRA_HUMAN.H11MO.0.A  top 111 seqs: 3.695e-05 (Corrected p-value: 0.01471)
+32. Fisher's exact test p-value of motif NR1D1_HUMAN.H11MO.0.B  top 111 seqs: 4.153e-05 (Corrected p-value: 0.01652)
+33. Fisher's exact test p-value of motif OTX2_HUMAN.H11MO.0.A  top 111 seqs: 4.213e-05 (Corrected p-value: 0.01675)
+34. Fisher's exact test p-value of motif VEZF1_HUMAN.H11MO.0.C  top 111 seqs: 5.911e-05 (Corrected p-value: 0.02343)
+35. Fisher's exact test p-value of motif BACH2_HUMAN.H11MO.0.A  top 111 seqs: 5.92e-05 (Corrected p-value: 0.02346)
+36. Fisher's exact test p-value of motif NFKB2_HUMAN.H11MO.0.B  top 111 seqs: 6.392e-05 (Corrected p-value: 0.02531)
+37. Fisher's exact test p-value of motif RARG_HUMAN.H11MO.0.B  top 111 seqs: 6.412e-05 (Corrected p-value: 0.02538)
+38. Fisher's exact test p-value of motif PRDM6_HUMAN.H11MO.0.C  top 111 seqs: 6.944e-05 (Corrected p-value: 0.02746)
+39. Fisher's exact test p-value of motif ZN274_HUMAN.H11MO.0.A  top 111 seqs: 7.594e-05 (Corrected p-value: 0.02999)
+40. Fisher's exact test p-value of motif NFIC_HUMAN.H11MO.0.A  top 111 seqs: 8.425e-05 (Corrected p-value: 0.03322)
+41. Fisher's exact test p-value of motif ERR2_HUMAN.H11MO.0.A  top 111 seqs: 9.66e-05 (Corrected p-value: 0.038)
+42. Fisher's exact test p-value of motif SOX10_HUMAN.H11MO.0.B  top 111 seqs: 0.0001035 (Corrected p-value: 0.04067)
+43. Fisher's exact test p-value of motif ZNF41_HUMAN.H11MO.0.C  top 111 seqs: 0.0001102 (Corrected p-value: 0.04322)
+44. Fisher's exact test p-value of motif GATA1_HUMAN.H11MO.0.A  top 111 seqs: 0.0001142 (Corrected p-value: 0.04478)
+45. Fisher's exact test p-value of motif ERR1_HUMAN.H11MO.0.A  top 111 seqs: 0.0001246 (Corrected p-value: 0.04874)
+46. Fisher's exact test p-value of motif COE1_HUMAN.H11MO.0.A  top 111 seqs: 0.0001251 (Corrected p-value: 0.04893)
+47. Fisher's exact test p-value of motif ZN320_HUMAN.H11MO.0.C  top 111 seqs: 0.0001251 (Corrected p-value: 0.04893)
