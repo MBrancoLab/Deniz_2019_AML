@@ -8,7 +8,7 @@ module load samtools
 module load use.own
 module load homer
 
-##get bam file name to process from bam_list.txt
+##get bam file name to process from bam_list.txt (bam files not included in the repository)
 bam=$(sed -n "${SGE_TASK_ID}p" bam_list.txt)
 
 set=$(echo $bam | sed s/.bam//)
