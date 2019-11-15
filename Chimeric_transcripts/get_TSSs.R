@@ -1,7 +1,8 @@
+##Extracts coordinates of TSSs from GTF files
 
 ##list GTF files
 
-gtf.files = list.files(pattern='_multi.gtf')
+gtf.files = list.files(pattern='_multi.gtf') ##from remove_single_exon.R
 
 
 ##get TSSs
