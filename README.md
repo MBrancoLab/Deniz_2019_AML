@@ -22,3 +22,12 @@ The average trend plots in Supplementary Figure 1C were made with HOMER (DHS_tre
 
 To analyse DHS patterns at individual elements from the selected TE families, a matrix of DHS-TE overlaps was made using the get_overlaps.R script. The element_level_analysis.R script takes these overlaps and, amongst other plots, checks for an association with the mutational profiles of the samples (Supplementary Figure 2). The plot_genotypes.R function is used to represent the mutational profiles as in Supplementary Figure 2A.
 
+## Expression
+
+*1. Generate expression table*
+
+A table of FPKM values for selected Blueprint samples was generated using the make_expression_table.R script. This downloads the relevant files from Blueprint, merges them, and adds annotation for the nearest LTR (from selected families).
+
+*2. Plot expression depending on DHS status*
+
+The LTR_nearest_expression.R script merges the expression table above with DHS overlap info, and then generates the plots displayed in Figures 1D and 1E of the paper.
