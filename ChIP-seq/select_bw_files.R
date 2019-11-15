@@ -1,4 +1,6 @@
-setwd('~/Desktop/AML/AML_scripts/')
+##Extracts a list of bigwig files that correspond to the histone ChIP-seq files used in the analysis
+
+setwd('~/Deniz_2019_AML/')
 
 
 ##blueprint files
