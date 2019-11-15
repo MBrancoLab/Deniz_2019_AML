@@ -20,3 +20,5 @@ The average trend plots in Supplementary Figure 1C were made with HOMER (DHS_tre
 
 *3. Element level analysis*
 
+To analyse DHS patterns at individual elements from the selected TE families, a matrix of DHS-TE overlaps was made using the get_overlaps.R script. The element_level_analysis.R script takes these overlaps and, amongst other plots, checks for an association with the mutational profiles of the samples (Supplementary Figure 2).
+
