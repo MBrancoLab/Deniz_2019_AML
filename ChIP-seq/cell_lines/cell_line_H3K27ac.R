@@ -1,5 +1,10 @@
-setwd('~/Desktop/AML/AML_scripts/ChIP-seq/cell_lines')
+##Finds overlaps between LTRs of interest and H3K27ac peaks from cell lines
+##Also processes overlaps with K562 ChromHMM ENCODE data
+##Checks the above overlaps against H3K27ac-marked LTRs in Blueprint AML samples
+##Uses bedtools
 
+setwd('~/Deniz_2019_AML/ChIP-seq/cell_lines')
+path_to_intersectbed = '~/Documents/bedtools-2.26.0/bin/intersectBed'
 
 
 ##### Cell line Data ######
@@ -10,7 +15,7 @@ setwd('~/Desktop/AML/AML_scripts/ChIP-seq/cell_lines')
 intersectBED <- function(a.file,b.file,opt.string="-u") {
 	out=tempfile()
 	
-	command=paste("~/Documents/bedtools-2.26.0/bin/intersectBed -a", a.file,"-b",b.file,opt.string,">",out,sep=" ")
+	command=paste(path_to_intersectbed,"-a", a.file,"-b",b.file,opt.string,">",out,sep=" ")
 	cat(command,"\n")
 	try(system(command))
 	res=read.table(out,header=F,as.is=T)
@@ -23,7 +28,7 @@ intersectBED <- function(a.file,b.file,opt.string="-u") {
 ##get overlap between H3K27ac data and LTRs
 
 peak.files = list.files(pattern='broadPeak')
-ltr.file = '~/Desktop/AML/AML_scripts/Annotations/all_LTRs.bed'
+ltr.file = '../../Annotations/all_LTRs.bed'
 
 k27 = list()
 for (i in 1:length(peak.files)) {
@@ -36,7 +41,7 @@ names(k27) = gsub('\\.broadPeak','',peak.files)
 ##### Blueprint AML Data ######
 
 
-bp = read.delim('~/Desktop/AML/AML_scripts/ChIP-seq/LTR_histone_overlaps/allLTR_H3K27ac_overlaps.txt',as.is=T)
+bp = read.delim('../LTR_histone_overlaps/allLTR_H3K27ac_overlaps.txt',as.is=T)
 
 aml.sum = rowSums(bp[,grep('AML',colnames(bp))])
 
@@ -53,9 +58,9 @@ colnames(in.bp) = names(k27)
 
 
 ##### HMM Data ######
+#From ENCODE, hg38 ChromHMM file in Annotations folder
 
-
-hmm = read.delim('ChromHMM_LTR_overlaps.txt',header=F,as.is=T)
+hmm = read.delim('ChromHMM_LTR_overlaps.txt',header=F,as.is=T) #overlaps generated with intersectBed
 
 
 ##calculate % of LTR overlap
