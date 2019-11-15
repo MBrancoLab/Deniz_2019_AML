@@ -3,7 +3,8 @@
 ##Input are fasta files separated by family
 ##Shuffled control was generated using the fasta-dinucleotide-shuffle tool
 
+database=~/Documents/motif_databases/HUMAN/HOCOMOCOv11_core_HUMAN_mono_meme_format.meme
 
 for te in LTR2B LTR2C LTR5B LTR5_Hs LTR12C LTR13A; do
-	ame --control ${te}_shuf.fa --o ${te}_hocomoco ${te}_hg38.fa ~/Documents/motif_databases/HUMAN/HOCOMOCOv11_core_HUMAN_mono_meme_format.meme
+	ame --control ../TF_motifs/fasta_files/${te}_shuf.fa --o ${te}_hocomoco ../TF_motifs/fasta_files/${te}_hg38.fa $database
 done
