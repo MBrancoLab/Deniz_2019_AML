@@ -1,16 +1,16 @@
 ##Extracts a list of bigwig files that correspond to the histone ChIP-seq files used in the analysis
 
-setwd('~/Deniz_2019_AML/')
+setwd('~/Deniz_2019_AML/ChIP-seq')
 
 
 ##blueprint files
 
-dlist = read.delim('blueprint_files.tsv',as.is=T)
+dlist = read.delim('../blueprint_files.tsv',as.is=T)
 
 
 ##peak files
 
-peak.files = list.files(path='./ChIP-seq/peak_files')
+peak.files = list.files(path='./peak_files')
 
 
 ##select bigwig files for the same experiments
