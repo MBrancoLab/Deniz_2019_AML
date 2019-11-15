@@ -58,15 +58,15 @@ The cell_line_H3K27ac.R script, first finds overlaps between LTR families of int
 
 *1. Get LTR-TF overlaps*
 
-Select (get_peak_files.R) and download relevant hg19 data (get_K562_peaks.sh), get overlaps with real and shuffled LTRs (upload count_overlaps.R). LTR hg19 annotations as zip file. Shuffled versions generated with bedtools shuffle.
+ChIP-seq peak files from K562 ENCODE data were selected (get_peak_files.R) and downloaded (get_K562_peaks.sh). The count_overlaps.R then counts the number of LTR-TF overlaps for each family of interest. Because hg19 peak files were used, hg19 annotations of the LTRs are included (as zip file). The same script was used to find overlaps with shuffled versions of the LTR annotations (generated using bedtools shuffle; included as a zip file).
 
 *2. Find enriched TFs*
 
-The find_enriched_TFs.R script compares real and shuffled overlaps to identify enriched TFs. It then generates a table with average enrichment values for each significant TF, and expression metrics for that TF extracted from Blueprint AML data. A heatmap with enrichment values of a few selected TFs is plotted (Figure 3A).
+The find_enriched_TFs.R script compares the TF overlaps with real and shuffled version of the LTRs to identify enriched TFs. It then generates a table with average enrichment values for each significant TF, and expression metrics for that TF extracted from Blueprint AML data. A heatmap with enrichment values of a few selected TFs is plotted (Figure 3A).
 
 *3. TF ChIP-seq profiles*
 
-Heatmap data from HOMER (TF_trends_heatmaps.sh) and plots made with make_heatmaps.R. Heatmap data included as a zip file.
+HOMER was used to generate TF ChIP-seq profile data (TF_trends_heatmaps.sh), and the respective heatmaps generated using make_heatmaps.R (Figure 3B). The heatmap data are included as a zip file.
 
 ## TF motifs
 
