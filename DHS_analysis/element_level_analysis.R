@@ -1,7 +1,10 @@
+##Takes DHS-TE overlaps for selected families and analyses association with mutational profiles
+##Other plots without genotyping data are also generated
 
-setwd('~/Desktop/AML/AML_scripts/DHS_analysis')
+
+setwd('~/Deniz_2019_AML/DHS_analysis')
 library(gplots)
-source('plot_genotypes.R')
+source('plot_genotypes.R') #function to represent mutational profiles as a coloured table
 
 
 ##get overlap data
@@ -23,7 +26,7 @@ diff.cols = grepl('Macrophages',colnames(dhs.mat)) | grepl('Monocytes',colnames(
 assi.cols = !line.cols & !cd34.cols & !aml.cols & !diff.cols
 
 
-##plot DHS matrix
+##plot DHS matrix (not included in paper)
 
 one.dhs = rowSums(dhs.mat[,aml.cols|assi.cols|diff.cols])>=1
 
@@ -33,7 +36,7 @@ hm = heatmap.2(dhs.mat[one.dhs,],trace='none',key=FALSE,
  hclustfun = function(x) hclust(x,method='average'))
 
 
-##plot number of DHS elements
+##plot number of DHS elements (not included in paper)
 
 plot(NA,NA,xlim=c(0,7),ylim=c(0,1200),las=1,xaxt='n',xlab='',ylab='n of DHS elements')
 points(rnorm(sum(aml.cols),mean=1,sd=0.2),colSums(dhs.mat[,aml.cols]),pch=19,cex=0.5)
@@ -42,7 +45,7 @@ points(rnorm(sum(assi.cols),mean=5,sd=0.2),colSums(dhs.mat[,assi.cols]),pch=19,c
 axis(1,at=c(1,3,5),labels=c('AML','Diff.','Assi'))
 
 
-##correlation matrix (with genotypes)
+##correlation matrix with genotype info
 
 cor.mat = cor(dhs.mat[one.dhs,aml.cols|assi.cols|diff.cols])
 
