@@ -1,4 +1,7 @@
-setwd('~/Desktop/AML/AML_scripts/K562_ENCODE')
+##Selects peak files from ENCODE metadata
+
+
+setwd('~/Deniz_2019_AML/K562_ENCODE')
 
 
 ##ENCODE metadata for all K562 ChIP-seq experiments
