@@ -1,4 +1,9 @@
-setwd('~/Desktop/AML/AML_scripts/K562_ENCODE')
+##Identifies TFs enriched at LTRs of interest
+##Generates table with average enrichment values and AML expression metrics for each TF
+##Plots heatmap
+
+
+setwd('~/Deniz_2019_AML/K562_ENCODE')
 library(gplots)
 
 
@@ -75,7 +80,8 @@ colnames(oe.av) = colnames(oe.sig)
 
 fpkm = read.delim('../Expression/BP_RNA_FPKM.txt.gz',as.is=T)
 
-fpkm$gene_name[fpkm$gene_name=='NSD2'] = 'WHSC1' #special cases where gene name matching failed
+#special cases where gene name matching failed:
+fpkm$gene_name[fpkm$gene_name=='NSD2'] = 'WHSC1'
 fpkm$gene_name[fpkm$gene_name=='EMSY'] = 'C11orf30'
 fpkm$gene_name[fpkm$gene_name=='CAVIN1'] = 'PTRF'
 fpkm$gene_name[fpkm$gene_name=='AC016586.1'] = 'SIRT6'
