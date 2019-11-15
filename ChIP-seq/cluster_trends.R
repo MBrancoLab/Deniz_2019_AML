@@ -1,7 +1,9 @@
-setwd('~/Desktop/AML/AML_scripts/ChIP-seq')
+##Generates trend plots across LTR2B elements from each of the clusters defined in define_clusters.R
+
+setwd('~/Deniz_2019_AML/ChIP-seq')
 
 
-##data files
+##data files (provided as a zip file in this repository)
 
 flist = list.files('./trends',full.names=TRUE)
 
