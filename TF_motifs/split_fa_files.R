@@ -1,9 +1,12 @@
-setwd('~/Desktop/AML/AML_scripts/TF_motifs/fasta_files')
+##Splits fasta files according to their DHS status in AML
+
+
+setwd('~/Deniz_2019_AML/TF_motifs/fasta_files')
 
 
 ##DHS data
 
-dhs = read.delim('~/Desktop/AML/AML_scripts/DHS_analysis/allLTR_DHS_overlaps.txt',as.is=T)
+dhs = read.delim('../../DHS_analysis/allLTR_DHS_overlaps.txt',as.is=T)
 
 
 ##select elements with DHS in at least 5 samples
