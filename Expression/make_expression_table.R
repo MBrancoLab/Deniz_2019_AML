@@ -1,7 +1,12 @@
-setwd('~/Desktop/AML/AML_scripts/Expression')
+##Generates table of FPKM values for selected Blueprint samples
+##Adds annotation of nearest LTR from selected families
+##Uses bedtools
+
+setwd('~/Deniz_2019_AML/Expression')
+path_to_bedtools = '~/Documents/bedtools-2.26.0/bin/'
 
 
-##Blueprint files
+##list of Blueprint files
 
 dlist = read.delim('../blueprint_files.tsv')
 
@@ -36,8 +41,8 @@ colnames(rna.df)[-1] = paste(as.character(rna$Sub.group),as.character(rna$Donor)
 
 ##find nearest LTR
 
-system('~/Documents/bedtools-2.26.0/bin/sortBed -i ../Annotations/all_LTRs.bed > sorted_LTRs.bed')
-system('~/Documents/bedtools-2.26.0/bin/closestBed -d -a ../Annotations/GRCh38p12_genes.bed -b sorted_LTRs.bed > closest_LTR.bed')
+system(paste(path_to_bedtools,'sortBed -i ../Annotations/all_LTRs.bed > sorted_LTRs.bed',sep='/'))
+system(paste(path_to_bedtools,'closestBed -d -a ../Annotations/GRCh38p12_genes.bed -b sorted_LTRs.bed > closest_LTR.bed',sep='/'))
 
 close = read.delim('closest_LTR.bed',as.is=T,header=F)
 unlink(c('sorted_LTRs.bed','closest_LTR.bed'))
