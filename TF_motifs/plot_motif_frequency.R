@@ -1,4 +1,8 @@
-setwd('~/Desktop/AML/AML_scripts/TF_motifs')
+##Takes output from FIMO to calculate motif frequency in each LTR family
+##Plots frequency of selected motifs and how it compares between DHS+ and DHS- copies
+
+
+setwd('~/Deniz_2019_AML/TF_motifs')
 
 
 ##read in fimo files
@@ -19,7 +23,7 @@ enr = read.table('enriched_motifs.txt',row.names=1)
 
 ##DHS elements
 
-dhs = read.delim('~/Desktop/AML/AML_scripts/DHS_analysis/allLTR_DHS_overlaps.txt',as.is=T)
+dhs = read.delim('../DHS_analysis/allLTR_DHS_overlaps.txt',as.is=T)
 is.dhs = rowSums(dhs[,7:ncol(dhs)])>=5
 
 
@@ -51,10 +55,12 @@ dhs.plot = function(ltr) {
 	 main=ltr,col='grey')
 	abline(0,1,lty=2)
 	
+	##option to highlight enriched motifs from AME analysis:
 	#sig = enr[,colnames(enr)==paste(ltr,'dhs',sep='_')]
 	#points(x[sig,1],x[sig,2],pch=19,cex=0.5,col='red')
 	#text(x[sig,1],x[sig,2],rownames(enr)[sig],cex=0.5,pos=4)
 	
+	##option to highlight specific motifs:
 	#sig=rownames(enr) %in% c('CEBPB_HUMAN.H11MO.0.A','GATA2_HUMAN.H11MO.0.A','HXA9_HUMAN.H11MO.0.B',
 	# 'MEIS1_HUMAN.H11MO.0.A','SPI1_HUMAN.H11MO.0.A','TAL1_HUMAN.H11MO.0.A')
 	#points(x[sig,1],x[sig,2],pch=19,cex=0.7,col='red')
