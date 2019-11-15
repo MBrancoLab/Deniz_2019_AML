@@ -36,6 +36,20 @@ The LTR_nearest_expression.R script merges the expression table above with DHS o
 
 De novo transcriptomes from Blueprint's AML samples were generated using stringtie (stringtie.sh in Shell_scripts folder) on STAR-aligned RNA-seq data. Single exon transcripts were removed (remove_single_exon.R) and the coordinates of multi-exonic transcripts extracted (get_TSSs.R).
 
-*2. Overlap multi-exon TSSs with LTRs
+*2. Overlap multi-exon TSSs with LTRs*
 
 The find_LTR_TSSs.R script finds overlap between the TSSs determined above and the LTR families of interest. It generates the plot in Figure 2A and a table of AML-associated transcripts with LTR-coupled TSSs.
+
+## ChIP-seq
+
+*1. Histone ChIP-seq at LTRs*
+
+Download blueprint, find overlaps, plot proportions
+
+*2. Cluster analysis*
+
+Define and plot clusters, draw trend plots
+
+*3. Cell line data*
+
+Proportion of AML-associated K27ac-marked LTRs in cell lines
