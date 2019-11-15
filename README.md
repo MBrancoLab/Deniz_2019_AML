@@ -52,4 +52,33 @@ The define_clusters.R script was used to performd k-means clustering of the LTR-
 
 *3. Cell line data*
 
-The cell_line_H3K27ac.R script, first finds overlaps between LTR families of interest and H3K27ac ChIP-seq data generated in this study. 
+The cell_line_H3K27ac.R script, first finds overlaps between LTR families of interest and H3K27ac ChIP-seq data generated in this study. It then finds how many of these peaks are also seen in Blueprint data (from get_histone_overlaps.R ). It also looks at overlaps with a K562 ChromHMM annotation. Finally, it generates the plot in Figure 2E.
+
+## K562 ENCODE TF data
+
+*1. Get LTR-TF overlaps*
+
+Select (get_peak_files.R) and download relevant hg19 data (get_K562_peaks.sh), get overlaps with real and shuffled LTRs (upload count_overlaps.R). LTR hg19 annotations as zip file. Shuffled versions generated with bedtools shuffle.
+
+*2. Find enriched TFs*
+
+The find_enriched_TFs.R script compares real and shuffled overlaps to identify enriched TFs. It then generates a table with average enrichment values for each significant TF, and expression metrics for that TF extracted from Blueprint AML data. A heatmap with enrichment values of a few selected TFs is plotted (Figure 3A).
+
+*3. TF ChIP-seq profiles*
+
+Heatmap data from HOMER (TF_trends_heatmaps.sh) and plots made with make_heatmaps.R. Heatmap data included as a zip file.
+
+## TF motifs
+
+*1. Enriched motifs against random*
+
+xx
+
+*2. Enriched motifs in DHS+ LTRs*
+
+Not used.
+
+*3. Motif frequency*
+
+FIMO
+
