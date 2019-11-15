@@ -1,4 +1,7 @@
-setwd('~/Desktop/AML/AML_scripts/K562_ENCODE')
+##Makes TF ChIP-seq profiles from HOMER data
+
+
+setwd('~/Deniz_2019_AML/K562_ENCODE')
 library(ComplexHeatmap)
 library(circlize)
 
