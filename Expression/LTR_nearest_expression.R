@@ -1,4 +1,7 @@
-setwd('~/Desktop/AML/AML_scripts/Expression')
+##Merges expression and DHS data
+##Generates plots to check the association between DHS+ LTRs and gene expression
+
+setwd('~/Deniz_2019_AML/Expression')
 library(vioplot)
 
 
@@ -109,7 +112,7 @@ goi = cbind(aml.genes,minus,plus)[sel,]
 
 #########################################################
 #### plot expression of AML LTRs in other cell types ####
-
+##(not included in the paper)
 
 exp.list = list(hsc,mono,macro,av.dhs,av.nodhs)
 aml.list = lapply(exp.list,function(x) x[near & fpkm$LTR_name %in% aml.ltrs])
