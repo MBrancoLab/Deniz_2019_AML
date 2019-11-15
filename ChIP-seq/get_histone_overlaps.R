@@ -1,9 +1,13 @@
-setwd('~/Desktop/AML/AML_scripts/ChIP-seq')
+##Finds overlaps between Blueprint ChIP-seq peaks and LTRs of interest
+##Uses bedtools
+
+setwd('~/Deniz_2019_AML/ChIP-seq')
+path_to_intersectbed = '~/Documents/bedtools-2.26.0/bin/intersectBed'
 
 
 ##file metadata
 
-meta = read.delim('~/Desktop/AML/AML_scripts/blueprint_files.tsv',as.is=T)
+meta = read.delim('../blueprint_files.tsv',as.is=T)
 
 
 ##intersect function
@@ -11,7 +15,7 @@ meta = read.delim('~/Desktop/AML/AML_scripts/blueprint_files.tsv',as.is=T)
 intersectBED <- function(a.file,b.file,opt.string="-c") {
 	out=tempfile()
 	
-	command=paste("~/Documents/bedtools-2.26.0/bin/intersectBed -a", a.file,"-b",b.file,opt.string,">",out,sep=" ")
+	command=paste(path_to_intersectbed,"-a", a.file,"-b",b.file,opt.string,">",out,sep=" ")
 	cat(command,"\n")
 	try(system(command))
 	res=read.table(out,header=F,as.is=T)
@@ -47,7 +51,7 @@ get.overlaps = function(peak.files,ltr.file,histone) {
 
 ##get overlaps for each histone mark
 
-peak.files = list.files('./peak_files',full.names=T)
+peak.files = list.files('./peak_files',full.names=T) ##folder not in repository; generate using download_peak_files.R
 ltr.file = '../Annotations/all_LTRs.bed'
 
 get.overlaps(peak.files,ltr.file,'H3K27ac')
