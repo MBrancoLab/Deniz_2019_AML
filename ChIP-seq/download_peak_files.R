@@ -1,6 +1,8 @@
-setwd('~/Desktop/AML/AML_scripts/ChIP-seq/peak_files')
+##Downloads relevant histone ChIP-seq peak data from Blueprint
 
-dlist = read.delim('~/Desktop/AML/AML_scripts/blueprint_files.tsv',as.is=T)
+setwd('~/Deniz_2019_AML/ChIP-seq')
+
+dlist = read.delim('../blueprint_files.tsv',as.is=T)
 
 
 ##select cell types of interest
