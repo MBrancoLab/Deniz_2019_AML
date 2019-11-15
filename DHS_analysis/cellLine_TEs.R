@@ -1,3 +1,7 @@
+##Plots number or percentage of elements within a family with DHS overlaps
+##Not included in the paper
+
+setwd('~/Deniz_2019_AML/DHS_analysis')
 
 
 ##get cell line data
