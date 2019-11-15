@@ -1,4 +1,6 @@
-setwd('~/Desktop/AML/AML_scripts/ChIP-seq')
+##Plots percentage of elements from each LTR family that overlap different histone marks
+
+setwd('~/Deniz_2019_AML/ChIP-seq')
 
 
 ##get overlap data
