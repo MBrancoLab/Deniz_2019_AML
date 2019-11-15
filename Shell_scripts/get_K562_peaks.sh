@@ -6,12 +6,12 @@
 #$ -t 1-1943
 
 
-##download
+##download selected peak files (lots!)
 file=$(sed -n "${SGE_TASK_ID}p" K562_hg19_peaks.txt | cut -f 2)
 wget $file
 
-##rename
+##rename files
 enc_name=$(echo $file | rev | cut -d / -f 1 | rev)
-new_name=$(sed -n "${SGE_TASK_ID}p" hg19_peaks.txt | cut -f 1)
+new_name=$(sed -n "${SGE_TASK_ID}p" K562_hg19_peaks.txt | cut -f 1)
 mv $enc_name $new_name-$enc_name
 
