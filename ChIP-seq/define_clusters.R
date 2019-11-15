@@ -1,4 +1,6 @@
-setwd('~/Desktop/AML/AML_scripts/ChIP-seq')
+##Performs k-means clustering of histone-TE overlaps
+
+setwd('~/Deniz_2019_AML/ChIP-seq')
 library(gplots)
 
 
