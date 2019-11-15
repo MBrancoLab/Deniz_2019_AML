@@ -70,15 +70,24 @@ HOMER was used to generate TF ChIP-seq profile data (TF_trends_heatmaps.sh), and
 
 ## TF motifs
 
-*1. Enriched motifs against random*
+*1. Motif frequency*
+
+The FIMO tool from the MEME suite was used to find TF motifs at all LTRs of interest (fimo.sh in Shell_scripts folder). The plot_motif_frequency.R script calculates the percentage of elements within each family that have the motif, and uses this to plot the frequency of selected motifs (Figure 3C) and how these compare between DHS+ and DHS- copies (Figure 3E). The output of FIMO is included as a zip file.
+
+*2. Enriched motifs*
+
+The AME tool from the MEME suite was used to identify TF motifs enriched in each LTR family over shuffled sequences (ame_shuffled.sh in Shell_scripts folder). A comparison between DHS+ and DHS- copies was also performed (ame_dhs.sh in Shell_scripts folder), but not included in the paper. Fasta files of DHS+ and DHS- copies (generated with split_fa_files.R), as well as shuffled versions of the LTRs (generated using the fasta-dinucleotide-shuffle tool of MEME) are included in the repository. A summary of the two analyses was generated using merge_ame_results.R.
+
+## CRISPRi
+
+*1. dCas9 peak annotation*
 
 xx
 
-*2. Enriched motifs in DHS+ LTRs*
+*2. H3K27ac/H3K9me3 ChIP-seq*
 
-Not used.
+xx
 
-*3. Motif frequency*
+*3. RNA-seq*
 
-FIMO
-
+xx
