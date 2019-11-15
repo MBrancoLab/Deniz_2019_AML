@@ -44,12 +44,12 @@ The find_LTR_TSSs.R script finds overlap between the TSSs determined above and t
 
 *1. Histone ChIP-seq at LTRs*
 
-Download blueprint, find overlaps, plot proportions
+Histone ChIP-seq peak files from relevant Blueprint samples were downoaded Download with download_peak_files.R, and the overlaps with LTR families of interest determined (get_histone_overlaps.R). These overlap tables were used to plot the proportion of elements from each family that is marked by a particular histone modification (plot_proportions.R), as shown in Supplementary Figure 3A.
 
 *2. Cluster analysis*
 
-Define and plot clusters, draw trend plots
+The define_clusters.R script was used to performd k-means clustering of the LTR-histone overlaps defined above, and to display clusters  in heatmaps, as shown in Figure 2C and Supplementary Figure S3B. HOMER was used to generate data for trend plots across LTR2B elements belonging to each of the defined clusters (ChIPseq_trends.sh in Shell_scripts folder), and the cluster_trends.R script used to draw these trend plots (Figure 2D).
 
 *3. Cell line data*
 
-Proportion of AML-associated K27ac-marked LTRs in cell lines
+The cell_line_H3K27ac.R script, first finds overlaps between LTR families of interest and H3K27ac ChIP-seq data generated in this study. 
