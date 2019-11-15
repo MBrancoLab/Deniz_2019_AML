@@ -1,4 +1,7 @@
-setwd('~/Desktop/AML/AML_scripts/TF_motifs')
+##Summarises the two AME analysis for TF motif enrichment
+
+
+setwd('~/Deniz_2019_AML/TF_motifs')
 
 
 ##read in ame files
