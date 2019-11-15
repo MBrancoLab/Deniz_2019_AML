@@ -1,5 +1,9 @@
-setwd('~/Desktop/AML/AML_scripts/Chimeric_transcripts')
+##Finds overlaps between LTRs of interest and Stringtie TSSs
+##Uses bedtools
+
+setwd('~/Deniz_2019_AML/Chimeric_transcripts')
 library('gplots')
+path_to_intersectbed = '~/Documents/bedtools-2.26.0/bin/intersectBed'
 
 
 ##load TSSs
@@ -14,7 +18,7 @@ overlap.tss = function(ltr.file,tss) {
 	b.file = tempfile()
 	out.file = tempfile()
 	write.table(tss.bed,b.file,sep='\t',quote=F,col.names=F,row.names=F)
-	command = paste('~/Documents/bedtools-2.26.0/bin/intersectBed -c -a',ltr.file,'-b',b.file,'>',out.file)
+	command = paste(path_to_intersectbed,'-c -a',ltr.file,'-b',b.file,'>',out.file)
 	try(system(command))
 	out = read.delim(out.file,header=F,as.is=T)
 	unlink(c(b.file,out.file))
