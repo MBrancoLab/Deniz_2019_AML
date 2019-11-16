@@ -1,4 +1,8 @@
-setwd('~/Desktop/AML/AML_scripts/CRISPRi')
+##Plots average gene expression values for each condition
+##Highlights genes that are dCas9 on- or off-targets
+
+
+setwd('~/Deniz_2019_AML/CRISPRi')
 
 
 ##rna-seq data
@@ -45,7 +49,7 @@ points(expr$OCI.ctrl[near.ltr],expr$OCI.krab[near.ltr],pch=19,cex=0.3,col='orang
 abline(a=0,b=1,lty=2)
 
 
-##cross with DE info
+##cross with differential expression info
 
 de.k562 = read.table('LTR2B_de_k562.txt',row.names=1)
 de.oci = read.table('LTR2B_de_oci.txt',row.names=1)
