@@ -80,14 +80,14 @@ The AME tool from the MEME suite was used to identify TF motifs enriched in each
 
 ## CRISPRi
 
-*1. dCas9 peak annotation*
+*1. dCas9 ChIP-seq*
 
-xx
+ChIP-seq profiles for dCas9 at LTR2B and LTR2 elements (Figure 5A) were generated using HOMER (as in several instances above) and the LTR2_heatmaps.R script. The annotate_dCas9_peaks.R takes the dCas9 peaks from MACS2 and annotates them with LTRs and genic features (Figure 5B). It also produces a list of genes lying nearest to each dCas9 peak, which is used for the RNA-seq analysis.
 
 *2. H3K27ac/H3K9me3 ChIP-seq*
 
-xx
+Quantification of the ChIP-seq signal at dCas9 peaks was done using Seqmonk. This quantitation is then used by ChIPseq_quantification.R to plot the fold change in signal and highlight the LTR2/2B targets (Figure 5C and Supplementary Figure 5C).
 
 *3. RNA-seq*
 
-xx
+Differential expression analysis was done using DESeq2 (RNA_DESeq.R). This script also generates normalised gene expression values, and includes a function to make expression barplots for specific genes, as in Figure 5G. The expression_analysis.R script plots all gene expression values and highlights genes close to dCas9 peaks, distinguishing those at LTR2/2B elements from other targets (Figure 5F and Supplementary Figure 5D).
