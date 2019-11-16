@@ -1,19 +1,16 @@
-setwd('~/Desktop/AML/AML_scripts/CRISPRi')
+##Performs differential expression analysis using DESeq2
+##Raw read counts were generated using Seqmonk
+
+
+setwd('~/Deniz_2019_AML/CRISPRi')
 library('DESeq2')
+
 
 ##Data
 
 reads = read.table('LTR2B_RNA_raw.txt', header = T, row.names = 1)
 colData = DataFrame(sample=factor(rep(c('K562.ctrl','K562.krab','OCI.ctrl','OCI.krab'),c(2,3,2,3))))
 colData1 = DataFrame(sample=factor(rep(c('Ctrl','KRAB'),c(2,3))))
-
-
-##Expression values (VST)
-
-##dds = DESeqDataSetFromMatrix(reads,colData,design=~sample)
-##vsd = varianceStabilizingTransformation(dds)
-##expr = assay(vsd)
-expr = read.table('LTR2B_RNA_vsd.txt',as.is=T,row.names=1)
 
 
 ##Get DE genes
@@ -34,8 +31,15 @@ k562 = read.delim('LTR2B_de_k562.txt', row.names=1)
 oci = read.delim('LTR2B_de_oci.txt', row.names=1)
 
 
+##Generate VST expression table
 
-##Check expression
+dds = DESeqDataSetFromMatrix(reads,colData,design=~sample)
+vsd = varianceStabilizingTransformation(dds)
+expr = assay(vsd)
+write.table(expr,'LTR2B_RNA_vsd.txt',sep='\t',quote=F,col.names=NA)
+
+
+##Check expression of specific genes
 
 plot.gene = function(gene,log=TRUE) {
 	id = rownames(expr)==gene
