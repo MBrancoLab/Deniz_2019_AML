@@ -1,4 +1,8 @@
-setwd('~/Desktop/AML/AML_scripts/CRISPRi')
+##Makes dCas9 ChIP-seq profiles of LTR2 and LTR2B elements
+##Heatmap data generated using HOMER
+
+
+setwd('~/Deniz_2019_AML/CRISPRi')
 library(ComplexHeatmap)
 library(circlize)
 
