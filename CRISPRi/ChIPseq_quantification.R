@@ -1,4 +1,8 @@
-setwd('~/Desktop/AML/AML_scripts/CRISPRi')
+##Plots fold change in H3K27ac/H3K9me3 ChIP-seq signal
+##Quantitation of ChIP-seq signal was produced using Seqmonk
+
+
+setwd('~/Deniz_2019_AML/CRISPRi')
 
 
 ##log2 RPM counts at dCas9 peaks
