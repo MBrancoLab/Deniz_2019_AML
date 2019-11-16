@@ -1,4 +1,8 @@
-setwd('~/Desktop/AML/AML_scripts/CRISPRi')
+##Annotates dCas9 ChIP-seq peaks with LTRs and genic features
+##Last line uses bedtools
+
+
+setwd('~/Deniz_2019_AML/CRISPRi')
 
 
 ##peak data
@@ -36,6 +40,7 @@ unlist(lapply(anno,function(x) sum(x$V11>0)))
 
 
 ##annotate Cas9 peaks
+##uses annotation hierarchy: LTR2B/LTR2>promoter>exon>intron>intragenic
 
 cas9 = read.delim(cas9.file,header=F,as.is=T)
 cas9$anno = character(nrow(cas9))
@@ -67,6 +72,7 @@ barplot(rbind(n.feat[5],n.feat[4],n.feat[6],n.feat[1],n.feat[3],n.feat[2]),
 
 ##annotate genes with nearest Cas9 peak
 
-system('~/Documents/bedtools-2.26.0/bin/closestBed -d -a ../Annotations/GRCh38p12_genes.bed -b dCas9_peaks_anno.txt > genes_closest_dCas9.txt')
+path_to_closestbed='~/Documents/bedtools-2.26.0/bin/closestBed'
+system(paste(path_to_closestbed,'-d -a ../Annotations/GRCh38p12_genes.bed -b dCas9_peaks_anno.txt > genes_closest_dCas9.txt'))
 
 
