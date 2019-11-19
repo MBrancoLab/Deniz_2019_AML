@@ -21,10 +21,12 @@ anno.files = list(ltr2b='../Annotations/LTR2B_hg38_id.bed',
 
 ##intersect peaks with annotations
 
+path_to_intersectbed = '~/Documents/bedtools-2.26.0/bin/intersectBed'
+
 anno = lapply(anno.files, function(x) {
 	out=tempfile()
 	
-	command=paste("~/Documents/bedtools-2.26.0/bin/intersectBed -c -a", cas9.file,"-b",x,">",out,sep=" ")
+	command=paste(path_to_intersectbed,"-c -a", cas9.file,"-b",x,">",out,sep=" ")
 	cat(command,"\n")
 	try(system(command))
 	res=read.table(out,header=F,as.is=T)
