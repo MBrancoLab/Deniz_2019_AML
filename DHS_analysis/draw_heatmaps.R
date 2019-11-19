@@ -1,7 +1,10 @@
+##Makes DHS profiles across LTRs using HOMER data
 
 
+setwd('~/Deniz_2019_AML/DHS_analysis')
 library(ComplexHeatmap)
 library(circlize)
+
 
 ##heatmap plot function
 ##note: homer returns only copies with at least one tag, so empty copies need to be added back
@@ -40,7 +43,12 @@ draw.heatmap = function(files,te,jpeg=FALSE) {
 }
 
 
+##HOMER output files (provided as zip file in the repository)
+
 flist = list.files('./heatmaps',full.names=TRUE)
+
+
+##generate heatmap profiles
 
 draw.heatmap(flist[grep('LTR2B-OCI3',flist)],'LTR2B',jpeg=T)
 draw.heatmap(flist[grep('LTR2C-OCI3',flist)],'LTR2C',jpeg=T)
