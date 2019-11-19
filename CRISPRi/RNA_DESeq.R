@@ -27,8 +27,8 @@ res2 = results(dds2,contrast=c('sample','KRAB','Ctrl'))
 oci = as.data.frame(subset(res2,padj<0.05))
 oci = oci[order(oci$log2FoldChange,decreasing=T),]
 
-k562 = read.delim('LTR2B_de_k562.txt', row.names=1)
-oci = read.delim('LTR2B_de_oci.txt', row.names=1)
+write.table(k562,'LTR2B_de_k562.txt',sep='\t',quote=F,col.names=NA)
+write.table(oci,'LTR2B_de_oci.txt',sep='\t',quote=F,col.names=NA)
 
 
 ##Generate VST expression table
