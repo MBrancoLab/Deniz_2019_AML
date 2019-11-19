@@ -12,7 +12,7 @@ fpkm = read.delim('BP_RNA_FPKM.txt.gz',as.is=T)
 
 ##DHS data
 
-dhs = read.delim('~/Desktop/AML/AML_scripts/DHS_analysis/allLTR_DHS_overlaps.txt',as.is=T)
+dhs = read.delim('../DHS_analysis/allLTR_DHS_overlaps.txt',as.is=T)
 
 
 
