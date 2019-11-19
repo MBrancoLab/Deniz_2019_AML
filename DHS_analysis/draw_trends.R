@@ -3,7 +3,7 @@
 ##uses a running mean to smooth data
 
 
-setwd('~/Desktop/AML/AML_scripts/DHS_analysis')
+setwd('~/Deniz_2019_AML/DHS_analysis')
 
 
 ##read data
