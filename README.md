@@ -40,7 +40,7 @@ De novo transcriptomes from Blueprint's AML samples were generated using stringt
 
 The find_LTR_TSSs.R script finds overlap between the TSSs determined above and the LTR families of interest. It generates the plot in Figure 2A and a table of AML-associated transcripts with LTR-coupled TSSs.
 
-## ChIP-seq
+## Histone ChIP
 
 *1. Histone ChIP-seq at LTRs*
 
@@ -48,13 +48,13 @@ Histone ChIP-seq peak files from relevant Blueprint samples were downoaded Downl
 
 *2. Cluster analysis*
 
-The define_clusters.R script was used to performd k-means clustering of the LTR-histone overlaps defined above, and to display clusters  in heatmaps, as shown in Figure 2C and Supplementary Figure S3B. HOMER was used to generate data for trend plots across LTR2B elements belonging to each of the defined clusters (ChIPseq_trends.sh in Shell_scripts folder), and the cluster_trends.R script used to draw these trend plots (Figure 2D).
+The define_clusters.R script was used to performd k-means clustering of the LTR-histone overlaps defined above, and to display clusters  in heatmaps, as shown in Figure 2C and Supplementary Figure 3B. HOMER was used to generate data for trend plots across LTR2B elements belonging to each of the defined clusters (ChIPseq_trends.sh in Shell_scripts folder), and the cluster_trends.R script used to draw these trend plots (Figure 2D).
 
 *3. Cell line data*
 
 The cell_line_H3K27ac.R script, first finds overlaps between LTR families of interest and H3K27ac ChIP-seq data generated in this study. It then finds how many of these peaks are also seen in Blueprint data (from get_histone_overlaps.R ). It also looks at overlaps with a K562 ChromHMM annotation. Finally, it generates the plot in Figure 2E.
 
-## K562 ENCODE TF data
+## TF ChIP
 
 *1. Get LTR-TF overlaps*
 
@@ -66,17 +66,17 @@ The find_enriched_TFs.R script compares the TF overlaps with real and shuffled v
 
 *3. TF ChIP-seq profiles*
 
-HOMER was used to generate TF ChIP-seq profile data (TF_trends_heatmaps.sh), and the respective heatmaps generated using make_heatmaps.R (Figure 3B). The heatmap data are included as a zip file.
+HOMER was used to generate TF ChIP-seq profile data (TF_trends_heatmaps.sh and bloodChIP_trends.sh). Heatmaps from K562 data were generated using make_heatmaps.R (Figure 3B), and the average trends for BloodChIP data were generated with BloodChIP_trends.R (Supplementary Figure 4). The heatmap and trend data are included as zip files.
 
 ## TF motifs
 
 *1. Motif frequency*
 
-The FIMO tool from the MEME suite was used to find TF motifs at all LTRs of interest (fimo.sh in Shell_scripts folder). The plot_motif_frequency.R script calculates the percentage of elements within each family that have the motif, and uses this to plot the frequency of selected motifs (Figure 3C) and how these compare between DHS+ and DHS- copies (Figure 3E). The output of FIMO is included as a zip file.
+The FIMO tool from the MEME suite was used to find TF motifs at all LTRs of interest (fimo.sh in Shell_scripts folder). The plot_motif_frequency.R script calculates the percentage of elements within each family that have the motif, and uses this to plot the frequency of selected motifs (Figure 3C) and how these compare between DHS+ and DHS- copies (Figure 3E and Supplementary Figure 5). The output of FIMO is included as a zip file.
 
 *2. Enriched motifs*
 
-The AME tool from the MEME suite was used to identify TF motifs enriched in each LTR family over shuffled sequences (ame_shuffled.sh in Shell_scripts folder). A comparison between DHS+ and DHS- copies was also performed (ame_dhs.sh in Shell_scripts folder), but not included in the paper. Fasta files of DHS+ and DHS- copies (generated with split_fa_files.R), as well as shuffled versions of the LTRs (generated using the fasta-dinucleotide-shuffle tool of MEME) are included in the repository. A summary of the two analyses was generated using merge_ame_results.R.
+The AME tool from the MEME suite was used to identify TF motifs enriched in each LTR family over shuffled sequences (ame_shuffled.sh in Shell_scripts folder). A comparison between DHS+ and DHS- copies was also performed (ame_dhs.sh in Shell_scripts folder), the results of which are in Supplementary Data 1. Fasta files of DHS+ and DHS- copies (generated with split_fa_files.R), as well as shuffled versions of the LTRs (generated using the fasta-dinucleotide-shuffle tool of MEME) are included in the repository. A summary of the two analyses was generated using merge_ame_results.R.
 
 ## CRISPRi
 
@@ -86,8 +86,8 @@ ChIP-seq profiles for dCas9 at LTR2B and LTR2 elements (Figure 5A) were generate
 
 *2. H3K27ac/H3K9me3 ChIP-seq*
 
-Quantification of the ChIP-seq signal at dCas9 peaks was done using Seqmonk. This quantitation is then used by ChIPseq_quantification.R to plot the fold change in signal and highlight the LTR2/2B targets (Figure 5C and Supplementary Figure 5C).
+Quantification of the ChIP-seq signal at dCas9 peaks was done using Seqmonk. This quantitation is then used by ChIPseq_quantification.R to plot the fold change in signal and highlight the LTR2/2B targets (Figure 5C and Supplementary Figure 8C).
 
 *3. RNA-seq*
 
-Differential expression analysis was done using DESeq2 (RNA_DESeq.R). This script also generates normalised gene expression values, and includes a function to make expression barplots for specific genes, as in Figure 5G. The expression_analysis.R script plots all gene expression values and highlights genes close to dCas9 peaks, distinguishing those at LTR2/2B elements from other targets (Figure 5F and Supplementary Figure 5D).
+Differential expression analysis was done using DESeq2 (RNA_DESeq.R). This script also generates normalised gene expression values, and includes a function to make expression barplots for specific genes, as in Figure 5G. The expression_analysis.R script plots all gene expression values and highlights genes close to dCas9 peaks, distinguishing those at LTR2/2B elements from other targets (Figure 5F and Supplementary Figure 8D).
