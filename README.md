@@ -1,9 +1,9 @@
 # Deniz_2019_AML
-Scripts and files from Deniz et al 2019 bioRxiv preprint:
+Scripts and files used in:
 
-Deniz O, Ahmed M, Todd CD, Rio-Machin A, Dawson MA, Branco MR (2019)
-"Endogenous retroviruses are a source of oncogenic enhancers in acute myeloid leukemia"
-bioRxiv, 772954; doi: https://doi.org/10.1101/772954
+Deniz O, Ahmed M, Todd CD, Rio-Machin A, Dawson MA, Branco MR (2020)
+["Endogenous retroviruses are a source of enhancers with oncogenic potential in acute myeloid leukaemia"](https://www.nature.com/articles/s41467-020-17206-4)
+*Nature Communications*, 11:3506
 
 
 ## DHS analysis
